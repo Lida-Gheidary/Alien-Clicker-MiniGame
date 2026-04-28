@@ -11,12 +11,36 @@ body {
     background-color: #0a0a1a;
     color: #ffffff;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    /* ✨ Stars on background */
+    background-image:
+        radial-gradient(1px 1px at 10% 15%, white, transparent),
+        radial-gradient(1px 1px at 25% 40%, white, transparent),
+        radial-gradient(1.5px 1.5px at 40% 10%, white, transparent),
+        radial-gradient(1px 1px at 55% 60%, white, transparent),
+        radial-gradient(1.5px 1.5px at 70% 25%, white, transparent),
+        radial-gradient(1px 1px at 80% 75%, white, transparent),
+        radial-gradient(1px 1px at 90% 5%, white, transparent),
+        radial-gradient(1.5px 1.5px at 15% 80%, white, transparent),
+        radial-gradient(1px 1px at 35% 90%, white, transparent),
+        radial-gradient(1px 1px at 60% 85%, white, transparent),
+        radial-gradient(1.5px 1.5px at 75% 50%, white, transparent),
+        radial-gradient(1px 1px at 92% 45%, white, transparent),
+        radial-gradient(1px 1px at 5% 55%, white, transparent),
+        radial-gradient(1.5px 1.5px at 48% 70%, white, transparent),
+        radial-gradient(1px 1px at 83% 18%, white, transparent),
+        radial-gradient(1px 1px at 20% 60%, white, transparent),
+        radial-gradient(1.5px 1.5px at 65% 35%, white, transparent),
+        radial-gradient(1px 1px at 30% 25%, white, transparent),
+        radial-gradient(1px 1px at 88% 88%, white, transparent),
+        radial-gradient(1.5px 1.5px at 50% 5%, white, transparent);
+    background-color: #0a0a1a;
 }
 
 h1 {
@@ -79,17 +103,18 @@ h2 {
 #scoreDisplay,
 #timerDisplay {
     font-size: 1.4rem;
-    margin: 6px 0;
+    margin: 4px 0;
 }
 
+/* 🎮 Game area scaled to fit 13" laptop (~900px tall viewport) without scrolling */
 #gameArea {
     position: relative;
-    width: min(600px, 90vw);
-    height: min(400px, 60vw);
+    width: min(720px, 90vw);
+    height: min(460px, 52vh);
     background: radial-gradient(ellipse at center, #1a1a3e 0%, #0a0a1a 100%);
     border: 2px solid #00e5ff;
     border-radius: 16px;
-    margin: 20px auto;
+    margin: 12px auto;
     overflow: hidden;
 }
 
@@ -106,7 +131,8 @@ h2 {
         80px 300px white, 180px 350px white, 350px 320px white,
         450px 370px white, 530px 250px white, 60px 200px white,
         250px 280px white, 380px 130px white, 470px 40px white,
-        150px 100px white, 320px 380px white, 560px 150px white;
+        150px 100px white, 320px 380px white, 560px 150px white,
+        620px 300px white, 680px 80px white, 700px 420px white;
     opacity: 0.6;
 }
 
@@ -134,17 +160,17 @@ h2 {
 #startMessage {
     font-size: 1.1rem;
     color: #aaaaff;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 #message {
     font-size: 1.1rem;
     color: #aaffaa;
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 #scoreboardSection {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 #scoreboard {
