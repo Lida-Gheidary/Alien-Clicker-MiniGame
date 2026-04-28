@@ -6,8 +6,8 @@ A fast-paced browser mini-game where you click aliens to score as many points as
 
 1. Enter your name (minimum 3 characters)
 2. Click **Start Game**
-3. Click the 👾 aliens as fast as you can — each click scores a point
-4. You have **60 seconds** — good luck!
+3. Click the 👾 aliens as fast as you can; each click scores a point
+4. You have **60 seconds**. Good luck!
 5. When time runs out, your score is submitted and the **Top 10 Scoreboard** appears
 
 ## ✨ Features
@@ -22,8 +22,8 @@ A fast-paced browser mini-game where you click aliens to score as many points as
 ## 🛠️ Built With
 
 - HTML, CSS, JavaScript
-- [Google Apps Script](https://developers.google.com/apps-script) — scoreboard database
-- [Zapier](https://zapier.com) — score submission webhook
+- [Google Apps Script](https://developers.google.com/apps-script); scoreboard database
+- [Zapier](https://zapier.com); score submission webhook
 
 ## 🚀 Play the Game
 
