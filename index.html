@@ -10,34 +10,40 @@
 
     <h1>🧑‍🚀 Alien Clicker</h1>
 
-    <div id="startSection">
-        <p>Enter your name and click Start!</p>
-        <input id="inputName" type="text" minlength="3" maxlength="16" placeholder="Your name...">
-        <button id="buttonStart">Start Game</button>
-        <p id="startError"></p>
-    </div>
+
+<div id="startSection">
+    <p>Enter your name and click Start!</p>
+    <input id="inputName" type="text" minlength="3" maxlength="16" placeholder="Your name...">
+    <button id="buttonStart">Start Game</button>
+    <p id="startError"></p>
+    <p id="scoreboardTeaser">🏆 Play to get on the Scoreboard!</p>
+</div>
 
     <div id="gameSection">
         <p id="scoreDisplay">Score: 0</p>
         <p id="timerDisplay">Time: 60</p>
-
         <div id="gameArea">
             <div id="astronaut">🧑‍🚀</div>
             <div id="alien1" class="alien">👾</div>
             <div id="alien2" class="alien">👾</div>
             <div id="alien3" class="alien">👾</div>
         </div>
-
         <p id="startMessage">Click an alien to start!</p>
     </div>
 
     <p id="message"></p>
+    <button id="buttonPlayAgain">🔄 Play Again</button>
 
-    <h2>🏆 Scoreboard</h2>
-
-    <div id="scoreboardSection">
-        <ul id="scoreboard"></ul>
+    <!-- Scoreboard Popup -->
+    <div id="popupOverlay">
+        <div id="popupBox">
+            <button id="popupClose">✕</button>
+            <h2>🏆 Top 10 Scoreboard</h2>
+            <ul id="scoreboard"></ul>
+        </div>
     </div>
+
+    <div id="scoreboardSection"></div>
 
     <script src="game.js"></script>
 </body>

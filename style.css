@@ -11,12 +11,12 @@ body {
     background-color: #0a0a1a;
     color: #ffffff;
     text-align: center;
-    padding: 10px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px 10px;
     background-image:
         radial-gradient(1px 1px at 10% 15%, white, transparent),
         radial-gradient(1px 1px at 25% 40%, white, transparent),
@@ -56,7 +56,7 @@ h2 {
 }
 
 #startSection p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #aaaaff;
     margin-bottom: 10px;
 }
@@ -95,18 +95,19 @@ h2 {
 
 #gameSection {
     display: none;
+    width: 100%;
 }
 
 #scoreDisplay,
 #timerDisplay {
-    font-size: 1.4rem;
-    margin: 4px 0;
+    font-size: 1.2rem;
+    margin: 3px 0;
 }
 
 #gameArea {
     position: relative;
-    width: min(720px, 90vw);
-    height: min(380px, 42vh);
+    width: min(660px, 88vw);
+    height: min(320px, 38vh);
     background: radial-gradient(ellipse at center, #1a1a3e 0%, #0a0a1a 100%);
     border: 2px solid #00e5ff;
     border-radius: 16px;
@@ -124,18 +125,18 @@ h2 {
     box-shadow:
         50px 80px white, 120px 30px white, 200px 150px white,
         300px 60px white, 400px 200px white, 500px 90px white,
-        80px 300px white, 180px 350px white, 350px 320px white,
-        450px 370px white, 530px 250px white, 60px 200px white,
-        250px 280px white, 380px 130px white, 470px 40px white,
-        150px 100px white, 320px 380px white, 560px 150px white,
-        620px 300px white, 680px 80px white, 700px 420px white;
+        80px 250px white, 180px 200px white, 350px 280px white,
+        450px 300px white, 530px 200px white, 60px 180px white,
+        250px 150px white, 380px 100px white, 470px 40px white,
+        150px 100px white, 320px 290px white, 560px 150px white,
+        620px 220px white, 640px 80px white;
     opacity: 0.6;
 }
 
 #astronaut {
     position: absolute;
-    font-size: 3rem;
-    bottom: 20px;
+    font-size: 2.5rem;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     user-select: none;
@@ -143,7 +144,7 @@ h2 {
 
 .alien {
     position: absolute;
-    font-size: 2.5rem;
+    font-size: 2rem;
     cursor: pointer;
     user-select: none;
     transition: transform 0.1s;
@@ -154,26 +155,90 @@ h2 {
 }
 
 #startMessage {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #aaaaff;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 #message {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #aaffaa;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
-#scoreboardSection {
-    margin-top: 20px;
+#buttonPlayAgain {
+    display: none;
+    margin-top: 12px;
+    font-size: 1rem;
+    padding: 8px 24px;
+    cursor: pointer;
+    background-color: #00e5ff;
+    color: #0a0a1a;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: 'Questrial', sans-serif;
+}
+
+#buttonPlayAgain:hover {
+    background-color: #00b8d4;
+}
+
+/* ===================== */
+/* Scoreboard Popup      */
+/* ===================== */
+#popupOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+#popupOverlay.active {
+    display: flex;
+}
+
+#popupBox {
+    background: #12122a;
+    border: 2px solid #00e5ff;
+    border-radius: 16px;
+    padding: 30px 40px;
+    max-width: 420px;
+    width: 90%;
+    position: relative;
+}
+
+#popupBox h2 {
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+}
+
+#popupClose {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #00e5ff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-family: 'Questrial', sans-serif;
+}
+
+#popupClose:hover {
+    color: #ffffff;
 }
 
 #scoreboard {
     list-style: none;
     padding: 0;
-    margin: 10px auto;
-    max-width: 400px;
+    margin: 0 auto;
 }
 
 #scoreboard li {
@@ -181,4 +246,15 @@ h2 {
     padding: 6px 0;
     border-bottom: 1px solid #333;
     color: #ccccff;
+}
+
+#scoreboardSection {
+    display: none;
+}
+
+#scoreboardTeaser {
+    color: #00e5ff;
+    font-size: 1.2rem;
+    margin-top: 16px;
+    font-weight: bold;
 }
