@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    background-color: #0a0a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00e5ff;
+}
+
+h2 {
+    margin-top: 10px;
+    color: #00e5ff;
+}
+
+#startSection {
+    margin-bottom: 20px;
+}
+
+#startSection p {
+    font-size: 1.1rem;
+    color: #aaaaff;
+    margin-bottom: 10px;
+}
+
+#inputName {
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    width: 180px;
+    margin-right: 8px;
+    font-family: 'Questrial', sans-serif;
+}
+
+#buttonStart {
+    font-size: 1rem;
+    padding: 8px 20px;
+    cursor: pointer;
+    background-color: #00e5ff;
+    color: #0a0a1a;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: 'Questrial', sans-serif;
+}
+
+#buttonStart:hover {
+    background-color: #00b8d4;
+}
+
+#startError {
+    color: #ff6666;
+    font-size: 0.9rem;
+    margin-top: 6px;
+}
+
+#gameSection {
+    display: none;
+}
+
+#scoreDisplay,
+#timerDisplay {
+    font-size: 1.4rem;
+    margin: 6px 0;
+}
+
+#gameArea {
+    position: relative;
+    width: min(600px, 90vw);
+    height: min(400px, 60vw);
+    background: radial-gradient(ellipse at center, #1a1a3e 0%, #0a0a1a 100%);
+    border: 2px solid #00e5ff;
+    border-radius: 16px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#gameArea::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    box-shadow:
+        50px 80px white, 120px 30px white, 200px 150px white,
+        300px 60px white, 400px 200px white, 500px 90px white,
+        80px 300px white, 180px 350px white, 350px 320px white,
+        450px 370px white, 530px 250px white, 60px 200px white,
+        250px 280px white, 380px 130px white, 470px 40px white,
+        150px 100px white, 320px 380px white, 560px 150px white;
+    opacity: 0.6;
+}
+
+#astronaut {
+    position: absolute;
+    font-size: 3rem;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+}
+
+.alien {
+    position: absolute;
+    font-size: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s;
+}
+
+.alien:hover {
+    transform: scale(1.2);
+}
+
+#startMessage {
+    font-size: 1.1rem;
+    color: #aaaaff;
+    margin-top: 10px;
+}
+
+#message {
+    font-size: 1.1rem;
+    color: #aaffaa;
+    margin-top: 16px;
+}
+
+#scoreboardSection {
+    margin-top: 30px;
+}
+
+#scoreboard {
+    list-style: none;
+    padding: 0;
+    margin: 10px auto;
+    max-width: 400px;
+}
+
+#scoreboard li {
+    font-size: 1rem;
+    padding: 6px 0;
+    border-bottom: 1px solid #333;
+    color: #ccccff;
+}

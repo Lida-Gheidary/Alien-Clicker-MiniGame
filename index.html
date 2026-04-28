@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🧑‍🚀 Alien Clicker</h1>
+
+    <div id="startSection">
+        <p>Enter your name and click Start!</p>
+        <input id="inputName" type="text" minlength="3" maxlength="16" placeholder="Your name...">
+        <button id="buttonStart">Start Game</button>
+        <p id="startError"></p>
+    </div>
+
+    <div id="gameSection">
+        <p id="scoreDisplay">Score: 0</p>
+        <p id="timerDisplay">Time: 60</p>
+
+        <div id="gameArea">
+            <div id="astronaut">🧑‍🚀</div>
+            <div id="alien1" class="alien">👾</div>
+            <div id="alien2" class="alien">👾</div>
+            <div id="alien3" class="alien">👾</div>
+        </div>
+
+        <p id="startMessage">Click an alien to start!</p>
+    </div>
+
+    <p id="message"></p>
+
+    <h2>🏆 Scoreboard</h2>
+
+    <div id="scoreboardSection">
+        <ul id="scoreboard"></ul>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
