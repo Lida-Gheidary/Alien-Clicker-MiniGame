@@ -36,6 +36,7 @@ const popupClose = document.getElementById("popupClose");
 // Functions
 // =====================
 function startGame() {
+    if (gameStarted) return;
     playerName = inputName.value.trim();
 
     if (playerName.length < 3) {
@@ -138,7 +139,11 @@ function getScoreboard() {
             popupOverlay.classList.add("active");
         })
         .catch(function(error) {
+            con        .catch(function(error) {
             console.log(error);
+            scoreboardList.innerHTML = "<li>Could not load scoreboard. Try again later.</li>";
+            popupOverlay.classList.add("active");
+        });sole.log(error);
         });
 }
 
